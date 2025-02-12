@@ -60,10 +60,10 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Safaribotts')
 
 #stream link shortner
-STREAM_SITE = (environ.get('STREAM_SITE', 'sharedisklinks.com'))
-STREAM_API = (environ.get('STREAM_API', '587f94f0e0b1813a52aed61290af6ea79d6ee464'))
-STREAM_HTO = (environ.get('STREAMHTO', 'https://t.me/Hoe/69'))
-STREAM_MODE = is_enabled((environ.get('STREAM_MODE', "False")), False)
+STREAM_SITE = (environ.get('STREAM_SITE', 'shortxlinks.com'))
+STREAM_API = (environ.get('STREAM_API', '7565b54ead36267a2a570fe3ab7f4fd39ebe5450'))
+STREAM_HTO = (environ.get('STREAMHTO', 'https://t.me/Links_Tutorialz/14'))
+STREAM_MODE = is_enabled((environ.get('STREAM_MODE', "True")), False)
 
 
 #verify site api and url
@@ -101,7 +101,7 @@ SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Sourabh_Mahala')
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
-PM_FILTER = is_enabled((environ.get('PM_FILTER', "True")), False)
+PM_FILTER = is_enabled((environ.get('PM_FILTER', "False")), False)
 
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", f"{script.CAPTION}")
