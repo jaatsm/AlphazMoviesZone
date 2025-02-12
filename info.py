@@ -69,20 +69,20 @@ STREAM_MODE = is_enabled((environ.get('STREAM_MODE', "False")), False)
 #verify site api and url
 IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'False')), False)
 VERIFY_IMG = environ.get("VERIFY_IMG", "https://graph.org/file/1669ab9af68eaa62c3ca4.jpg")
-VERIFY_URL = environ.get('VERIFY_URL', 'sharedisklinks.com')
-VERIFY_API = (environ.get('VERIFY_API', '587f94f0e0b1813a52aed61290af6ea79d6ee464'))
+VERIFY_URL = environ.get('VERIFY_URL', 'shortxlinks.com')
+VERIFY_API = (environ.get('VERIFY_API', '7565b54ead36267a2a570fe3ab7f4fd39ebe5450'))
 
 TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "600"))
-VERIFY_URL2 = environ.get('VERIFY_URL2', 'sharedisklinks.com')
-VERIFY_API2 = (environ.get('VERIFY_API2', '587f94f0e0b1813a52aed61290af6ea79d6ee464'))
+VERIFY_URL2 = environ.get('VERIFY_URL2', 'shortxlinks.com')
+VERIFY_API2 = (environ.get('VERIFY_API2', '7565b54ead36267a2a570fe3ab7f4fd39ebe5450'))
  
 THIRD_VERIFY_GAP = int(environ.get('THIRD_VERIFY_GAP', "600"))
-VERIFY_URL3 = environ.get('VERIFY_URL3', 'sharedisklinks.com')
-VERIFY_API3 = (environ.get('VERIFY_API3', '587f94f0e0b1813a52aed61290af6ea79d6ee464'))
+VERIFY_URL3 = environ.get('VERIFY_URL3', 'siortxlinks.com')
+VERIFY_API3 = (environ.get('VERIFY_API3', '7565b54ead36267a2a570fe3ab7f4fd39ebe5450'))
  
-TUTORIAL = environ.get('TUTORIAL', 'https://t.me/shdjekkw')
-TUTORIAL2 = environ.get('TUTORIAL2', 'https://t.me/hejejje')
-TUTORIAL3 = environ.get('TUTORIAL3', 'https://t.me/safabsovhwi3')
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Links_Tutorialz/14')
+TUTORIAL2 = environ.get('TUTORIAL2', 'https://t.me/Links_Tutorialz/14')
+TUTORIAL3 = environ.get('TUTORIAL3', 'https://t.me/Links_Tutorialz/14')
 
 # auto files delete
 AUTO_FILE_DELETE = is_enabled((environ.get('AUTO_FILE_DELETE', "True")), False)
@@ -98,7 +98,7 @@ LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1002334087440))
 GROUP_VERIFY_LOGS = int(environ.get('GROUP_VERIFY_LOGS', -1002427855589)) # Group verify stats 
 REQ_CHANNEL = int(environ.get('REQ_CHANNEL', -1002427855589)) # movies request channel, else log channel
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Sourabh_Mahala')
-IMDB = is_enabled((environ.get('IMDB', "True")), True)
+IMDB = is_enabled((environ.get('IMDB', "False")), True)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
 PM_FILTER = is_enabled((environ.get('PM_FILTER', "True")), False)
@@ -117,14 +117,14 @@ REACTION = ["😍", "⚡", "😇"]
 # Streaming
 BIN_CHANNEL = int(environ.get("BIN_CHANNEL", "-1002296509310")) 
 PORT = int(environ.get('PORT', 8080))
-NO_PORT = bool(environ.get('NO_PORT', True))
+NO_PORT = bool(environ.get('NO_PORT', False))
 APP_NAME = None
 if 'DYNO' in environ:
     ON_HEROKU = True
     APP_NAME = environ.get('APP_NAME')
 else:
-    ON_HEROKU = True
-BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', 'https://greasy-lobster-rkjaat114-f4cc2e69.koyeb.app/'))
+    ON_HEROKU = False
+BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
 FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
 URL = "https://{}/".format(FQDN) if ON_HEROKU or NO_PORT else \
     "https://{}:{}/".format(FQDN, PORT)
