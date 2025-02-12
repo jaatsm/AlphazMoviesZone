@@ -63,7 +63,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Safaribotts')
 STREAM_SITE = (environ.get('STREAM_SITE', 'shortxlinks.com'))
 STREAM_API = (environ.get('STREAM_API', '7565b54ead36267a2a570fe3ab7f4fd39ebe5450'))
 STREAM_HTO = (environ.get('STREAMHTO', 'https://t.me/Links_Tutorialz/14'))
-STREAM_MODE = is_enabled((environ.get('STREAM_MODE', "True")), False)
+STREAM_MODE = is_enabled((environ.get('STREAM_MODE', "False")), False)
 
 
 #verify site api and url
@@ -110,18 +110,18 @@ LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False")
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
-MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
+MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "False")), True)
 
 REACTION = ["😍", "⚡", "😇"]
 
 # Streaming
 BIN_CHANNEL = int(environ.get("BIN_CHANNEL", "-1002296509310")) 
 PORT = int(environ.get('PORT', 8080))
-NO_PORT = bool(environ.get('NO_PORT', False))
+NO_PORT = bool(environ.get('NO_PORT', True))
 APP_NAME = None
 if 'DYNO' in environ:
     ON_HEROKU = True
-    APP_NAME = environ.get('APP_NAME')
+    APP_NAME = environ.get('https://greasy-lobster-rkjaat114-f4cc2e69.koyeb.app/')
 else:
     ON_HEROKU = False
 BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
